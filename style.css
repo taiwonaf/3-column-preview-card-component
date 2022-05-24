@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca:wght@400;700&display=swap');
+
+:root {
+    --Bright-orange: hsl(31, 77%, 52%);
+    --Dark-cyan: hsl(184, 100%, 22%);
+    --Very-dark-cyan: hsl(179, 100%, 13%);
+    --Transparent-white-paragraphs: hsla(0, 0%, 100%, 0.75);
+    --Very-light-gray-background-headings-buttons: hsl(0, 0%, 95%);
+}
+
+
+* {
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+}
+
+body {
+    font-family: 'Big Shoulders Display', cursive;
+    font-family: 'Lexend Deca', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    background-color: var(--Transparent-white-paragraphs);
+    color: white;
+    font-size: 15px;
+}
+
+.container {
+    display: flex;
+    max-width: 1110px;
+    background-color: aqua;
+    margin: 0px 20px;
+}
+
+.cars {
+    padding: 50px 45px;
+    overflow: auto;
+}
+
+.sedans {
+    background-color: var(--Bright-orange);
+}
+
+.suvs {
+    background-color: var(--Dark-cyan);
+}
+
+.luxury {
+    background-color: var(--Very-dark-cyan);
+}
+
+.cars h1 {
+    font-family: 'Big Shoulders Display', cursive;
+    font-size: 50px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    color: var(--Very-light-gray-background-headings-buttons);
+    text-transform: uppercase;
+}
+
+.cars p {
+    color: var(--Transparent-white-paragraphs);
+    margin-top: 20px;
+    margin-bottom: 40px;
+    line-height: 1.7;
+    font-family: 'Lexend Deca', sans-serif;
+    font-weight: 400;
+}
+
+.btn {
+    background-color: var(--Very-light-gray-background-headings-buttons);
+    text-decoration: none;
+    display: inline-block;
+    padding: 20px 40px;
+    border-radius: 40px;
+    font-weight: 700;
+    font-family: 'Lexend Deca', sans-serif;
+    margin-top: auto;
+}
+
+.sedans .btn {
+    color: var(--Bright-orange);
+}
+
+.suvs .btn {
+    color: var(--Dark-cyan);
+}
+
+.luxury .btn {
+    color: var(--Very-dark-cyan);
+}
+
+.btn:hover {
+    background-color: transparent;
+    box-sizing: border-box;
+    color: var(--Very-light-gray-background-headings-buttons);
+    border: 2px solid var(--Very-light-gray-background-headings-buttons);
+    padding: 18px 38px;
+}
+
+.attribution {
+    color: var(--Dark-cyan);
+    font-size: 18px;
+    font-weight: 700;
+}
+
+@media (max-width: 900px) {
+    .container {
+        
+    }
+    .cars {
+        display: flex;
+        flex-direction: column;
+    }
+    .cars h1 {
+        font-size: 36px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    .cars p {
+        margin-top: 10px;
+        margin-bottom: 10px;
+        font-size: 14px;
+    }
+
+    .btn {
+        font-size: 14px;
+        padding: 10px 20px;
+        display: inline;
+        align-self: flex-start;
+        margin-top: auto;
+    }
+
+
+}
+
+@media (max-width: 685px) {
+    body {
+        height: 100%;
+        padding: 50px 0px;
+    }
+    .container {
+        flex-direction: column;
+        margin: 0px 30px;
+    }
+}
+
+@media (max-width: 375px) {
+    .container {
+        min-width: 300px;
+    }
+}
